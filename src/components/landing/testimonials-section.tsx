@@ -3,22 +3,22 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const testimonials = [
   {
-    name: 'Alex Johnson',
+    name: 'Priya Sharma',
     title: 'CS Student',
     quote: 'This toolkit saved me weeks of setup time for my final-year AI project. Everything just works out of the box!',
-    avatar: 'AJ',
+    avatar: 'PS',
   },
   {
-    name: 'Maria Garcia',
+    name: 'Rohan Gupta',
     title: 'Aspiring Data Scientist',
     quote: 'As a beginner, I was overwhelmed. This toolkit gave me all the professional tools in one place. It runs perfectly on my laptop!',
-    avatar: 'MG',
+    avatar: 'RG',
   },
   {
-    name: 'Dr. Chen',
+    name: 'Dr. Patel',
     title: 'University Researcher',
     quote: 'An excellent resource for our students. It democratizes access to data science tools without needing expensive hardware.',
-    avatar: 'DC',
+    avatar: 'DP',
   },
 ];
 

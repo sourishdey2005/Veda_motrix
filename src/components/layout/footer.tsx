@@ -42,7 +42,7 @@ export function Footer() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              Made with 💡 by Sourish and Team | © 2025 AI Data Science Toolkit
+              Made with 💡 by Aarav and Team | © 2025 AI Data Science Toolkit
             </p>
           </div>
         </div>

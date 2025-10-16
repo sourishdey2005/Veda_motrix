@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins, Inter } from 'next/font/google';
+import { Poppins, Inter, Orbitron } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
@@ -15,9 +15,14 @@ const fontInter = Inter({
   variable: '--font-inter',
 });
 
+const fontOrbitron = Orbitron({
+  subsets: ['latin'],
+  variable: '--font-orbitron',
+});
+
 export const metadata: Metadata = {
-  title: 'AI & Data Science Toolkit',
-  description: 'Empower Your AI Journey — No GPU Needed.',
+  title: 'VEDA-MOTRIX AI – The Vedic Intelligence of Mobility',
+  description: 'Autonomous Predictive Maintenance and Proactive Service Scheduling with a Self-Learning Manufacturing Feedback Loop.',
 };
 
 export default function RootLayout({
@@ -27,23 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body
         className={cn(
           'min-h-screen font-body antialiased',
           fontPoppins.variable,
-          fontInter.variable
+          fontInter.variable,
+          fontOrbitron.variable
         )}
       >
         {children}

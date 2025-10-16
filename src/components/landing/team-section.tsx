@@ -5,28 +5,28 @@ import Link from 'next/link';
 
 const team = [
   {
-    name: 'Sourish',
+    name: 'Aarav',
     role: 'AI & Cloud Architect',
     tagline: 'Orchestrating the digital symphony.',
-    avatar: 'SO',
+    avatar: 'A',
   },
   {
-    name: 'Nitish',
+    name: 'Isha',
     role: 'Lead Full-Stack Developer',
     tagline: 'Building bridges between ideas and reality.',
-    avatar: 'NI',
+    avatar: 'I',
   },
   {
-    name: 'Subham',
+    name: 'Rohan',
     role: 'Data Scientist & ML Engineer',
     tagline: 'Uncovering the secrets hidden in data.',
-    avatar: 'SU',
+    avatar: 'R',
   },
   {
-    name: 'Shivam',
+    name: 'Priya',
     role: 'UI/UX & Product Visionary',
     tagline: 'Designing experiences, not just interfaces.',
-    avatar: 'SH',
+    avatar: 'P',
   },
 ];
 
@@ -47,7 +47,7 @@ export function TeamSection() {
             <Card key={member.name} className="text-center group">
               <CardHeader className="items-center">
                 <Avatar className="h-24 w-24 border-2 border-primary/50 group-hover:border-accent transition-colors">
-                  <AvatarImage src={`https://i.pravatar.cc/100?u=${member.avatar}`} />
+                  
                   <AvatarFallback>{member.avatar}</AvatarFallback>
                 </Avatar>
                 <CardTitle>{member.name}</CardTitle>

@@ -44,7 +44,7 @@ export function HowItWorksSection() {
                 viewport={{ once: true }}
               >
                 <div className="group flex flex-col items-center text-center w-32 md:w-40">
-                  <div className="relative flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary/50 bg-secondary transition-all duration-300 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/50">
+                  <div className="relative flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary/50 bg-secondary transition-all duration-300 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/50 float-animation">
                     <div className="text-primary group-hover:text-primary-foreground">
                       {step.icon}
                     </div>
@@ -52,7 +52,15 @@ export function HowItWorksSection() {
                   <h3 className="mt-2 text-sm font-semibold">{step.name}</h3>
                 </div>
                 {index < flowSteps.length - 1 && (
-                  <ChevronRight className="h-8 w-8 text-muted-foreground mx-2 md:mx-4" />
+                   <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
+                    viewport={{ once: true }}
+                    className="mx-2 md:mx-4 p-1 rounded-full connector-pulse"
+                  >
+                    <ChevronRight className="h-8 w-8 text-primary/70" />
+                  </motion.div>
                 )}
               </motion.div>
             ))}

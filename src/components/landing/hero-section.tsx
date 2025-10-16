@@ -1,7 +1,23 @@
+'use client';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlayCircle } from 'lucide-react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+const MotionLine = ({ delay }: { delay: number }) => (
+  <motion.div
+    className="motion-blur-line"
+    initial={{ x: '-100%', width: '10%' }}
+    animate={{ x: '100%', width: '40%' }}
+    transition={{
+      repeat: Infinity,
+      duration: 2.5,
+      delay: delay,
+      ease: 'linear',
+    }}
+  />
+);
 
 export function HeroSection() {
   return (
@@ -10,13 +26,23 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-20 bg-[url('/grid.svg')] bg-center opacity-5" />
       
       <div className="container relative text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight font-tech sm:text-5xl md:text-6xl lg:text-7xl">
+        <motion.h1 
+          className="text-4xl font-extrabold tracking-tight font-tech sm:text-5xl md:text-6xl lg:text-7xl"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <span className="text-primary">VEDA-MOTRIX AI</span>
           <span className="block text-foreground text-3xl sm:text-4xl md:text-5xl mt-2">The Vedic Intelligence of Mobility</span>
-        </h1>
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
+        </motion.h1>
+        <motion.p 
+          className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           Autonomous Predictive Maintenance and Proactive Service Scheduling with a Self-Learning Manufacturing Feedback Loop.
-        </p>
+        </motion.p>
 
         <div className="relative mt-12 flex justify-center items-center">
              <Image 
@@ -27,14 +53,30 @@ export function HeroSection() {
                 className="opacity-40"
                 data-ai-hint="holographic car engine"
              />
-             <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 w-full h-full overflow-hidden">
+                <MotionLine delay={0} />
+                <MotionLine delay={0.5} />
+                <MotionLine delay={1} />
+                <MotionLine delay={1.5} />
+            </div>
+             <motion.div 
+              className="absolute inset-0 flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
                 <p className="text-xl md:text-2xl font-medium text-amber-400 font-tech tracking-wider bg-black/50 p-4 rounded-lg">
                     From Telematics to Transformation — Intelligent Automotive Orchestration.
                 </p>
-             </div>
+             </motion.div>
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+        <motion.div 
+          className="mt-12 flex flex-wrap items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
           <Button size="lg" asChild className="rounded-full glow-on-hover font-bold px-8">
             <Link href="#">Try Prototype</Link>
           </Button>
@@ -49,7 +91,7 @@ export function HeroSection() {
               Watch Demo
             </Link>
           </Button>
-        </div>
+        </motion.div>
         
       </div>
     </section>

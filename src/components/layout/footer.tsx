@@ -15,7 +15,7 @@ export function Footer() {
                 </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              © 2025 VEDA-MOTRIX AI. Made with 🪷 Wisdom & Code.
+              © 2025 VEDA-MOTRIX AI. Made By Team Code & Karma.
             </p>
           </div>
 

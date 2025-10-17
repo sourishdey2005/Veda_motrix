@@ -20,7 +20,7 @@ export function Header() {
         </nav>
         <div className="flex items-center justify-end space-x-4 md:flex-initial">
           <Button asChild className="rounded-full glow-on-hover">
-            <Link href="#">Try Prototype</Link>
+            <Link href="https://vedamotrix.netlify.app/" target="_blank" rel="noopener noreferrer">Try Prototype</Link>
           </Button>
         </div>
       </div>

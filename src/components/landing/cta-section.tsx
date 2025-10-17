@@ -11,7 +11,7 @@ export function CtaSection() {
             </h2>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <Button size="lg" asChild className="rounded-full glow-on-hover font-bold px-8">
-                    <Link href="#">
+                    <Link href="https://vedamotrix.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <Presentation className="mr-2"/>
                         Open Live Demo
                     </Link>

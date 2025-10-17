@@ -78,7 +78,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <Button size="lg" asChild className="rounded-full glow-on-hover font-bold px-8">
-            <Link href="#">Try Prototype</Link>
+            <Link href="https://vedamotrix.netlify.app/" target="_blank" rel="noopener noreferrer">Try Prototype</Link>
           </Button>
           <Button
             size="lg"
